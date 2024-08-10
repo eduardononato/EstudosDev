@@ -1,16 +1,18 @@
 <!-- sldsValidatorIgnore -->
 <template>
   <lightning-card>
-        <template if:true={accounts.data}>
-            <lightning-datatable
-                key-field="Id"
-                data={accounts.data}
-                columns={columns}
-            >
-            </lightning-datatable>
-        </template>
-        <template if:true={errors}>
-            <p>{}</p>
-        </template>
+    <div class="Edu">    
+            <template if:true={accounts.data}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={accounts.data}
+                    columns={columns}
+                >
+                </lightning-datatable>
+            </template>
+            <template if:true={errors}>
+                <p>{errors}</p>
+            </template>
+    </div>
   </lightning-card>
 </template>
